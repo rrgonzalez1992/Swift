@@ -1,0 +1,13 @@
+language: objective-c
+ 
+branches:
+ only:
+ - master
+ 
+xcode_project: prueba.xcodeproj
+xcode_scheme: pruebaTests
+osx_image: xcode6.4
+xcode_sdk: iphonesimulator8.4
+ 
+script:
+- xcodebuild clean build test -project prueba.xcodeproj -scheme pruebaTests
